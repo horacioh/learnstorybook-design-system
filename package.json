@@ -1,6 +1,6 @@
 {
   "name": "@horacio/learnstorybook-design-system",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "learning how to build design systems",
   "main": "dist/index.js",
   "repository": "git@github.com:horacioh/learnstorybook-design-system.git",

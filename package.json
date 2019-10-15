@@ -1,7 +1,22 @@
 {
-  "name": "learnstorybook-design-system",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@horacio/learnstorybook-design-system",
+  "version": "0.1.1",
+  "description": "learning how to build design systems",
+  "main": "dist/index.js",
+  "repository": "git@github.com:horacioh/learnstorybook-design-system.git",
+  "author": "Horacio Herrera <hi@horacioh.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "BABEL_ENV=production babel src -d dist",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public",
+    "build-storybook-docs": "build-storybook -s public --docs",
+    "chromatic": "CHROMATIC_APP_CODE=v22ao43wmse chromatic"
+  },
   "dependencies": {
     "polished": "^3.4.1",
     "prop-types": "^15.7.2",
@@ -9,16 +24,6 @@
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0",
     "styled-components": "^4.4.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public",
-    "build-storybook-docs": "build-storybook -s public --docs",
-    "chromatic": "CHROMATIC_APP_CODE=v22ao43wmse chromatic"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,7 +40,13 @@
       "last 1 safari version"
     ]
   },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  },
   "devDependencies": {
+    "@babel/cli": "^7.6.4",
     "@storybook/addon-a11y": "^5.2.4",
     "@storybook/addon-actions": "^5.2.4",
     "@storybook/addon-docs": "^5.2.4",
@@ -44,6 +55,7 @@
     "@storybook/addon-storysource": "^5.2.4",
     "@storybook/addons": "^5.2.4",
     "@storybook/react": "^5.2.4",
+    "auto": "^7.8.0",
     "prettier": "^1.18.2",
     "storybook-chromatic": "^3.0.2"
   }
